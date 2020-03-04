@@ -25,7 +25,7 @@ script:
 deploy:
   provider: releases
   api_key:
-    secure: 7f4dc45a19f742dce39cbe4d1e5852fb588593fd
+    secure: $TravisReleaseApk
   file: app/build/outputs/apk/app-release.apk
   skip_cleanup: true
   on:
