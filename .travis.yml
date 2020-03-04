@@ -17,7 +17,6 @@ script:
 - "./gradlew assembleRelease"
 before_deploy:
   - echo " travis deploy +++++++++++++++++++++++++++++++++++"
-  # Set up git user name and tag this commit
   - git config --local user.name hawkwei0921
   - git config --local user.email hawk_wei@htc.com
   - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
@@ -30,9 +29,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    # secure: bZq3G1k20XeFB2JYO1TEIhN3NLgfh9w65sfVG2OnN4nD/CDr/B01qvuC3Ojk1zzkViJD9Y6hVt1YdDGc2K+vKJWns+mH37FQDHNA4YSOwauH2BGaXa48O6DuHu43dwVZRNCp0GFxTyrwOrZNFu923/wGscMAQvszBS1YU3a8RpH2ffGT2Y0udIH058rWnt/JwI5TfrSaBFQ5ZmFFessFaP0FFpSzMz+9j2evdhJa6KRpEKRY6X29dbIM1zZRfwg+8p7myQ9j0/QNeGxodDAmpgV/yRMv5HdGfa+yOHkMM0gAkanHN7brEMOFmb8EZWJWcmJ5/avdz15oP0YN4eJGA+MAAsnnecS3YIi89vGp3iXP6Ic0FPCIn4i3N7ZAGA/1ulVNBR8I4VO9MKYwtuqNkoPe7FSQ7KpxmIpBvohfzOv8Zwy5g6QKgEmbqI9f/i/hH4MJMYGD3R7lHItHxZM8XxaOi5R6u7jd8OdM0+QFs7iyXVdW0c2AMtLjP1MqvFMGdtBuAMnieg5rq9ru3lrHRfNrOZy9fbUPbAvkBePLRGbb+vJZx1XbQBhUX8GIfoWW3IbD+ThUtF8dqhTpXGMdXh7UZPBUNx6g/ZIlpw4cKqUh3oXqLNABv42njlDPOSDLpqH2Z1uPu2un3giSoKL0cKDm0KSwxW2S8MRmBa96kok=
-    secure: ${TravisReleaseBuiltAPK}
-    # TravisReleaseBuiltAPK = ceddaf8dc94dbc37a2197f81457e398056d7af85
+    secure: I7lqLNgBGVzXVNx0J9jgwfiRPWdeZFJwddN7ieISkwHmSgL29obS/udRNB6cnnjdRgS/9N471o/mnhJneCAYDtGYUv801JfffrqK8LFRIW6SyK79P+q8X+3wNLFV+/+HF0VMdiF4ZhySzEn4W0peycv5LX0sRUMTKFhXcErTXTqcGAJAh+qT/J5+EEGp1RxlXK5AhcpgCD8DNZq+YcvyVUB/lKLfZ9EhH+VAuXM4cmpDs1ueiHvCPrlOlmmjIu1sLnJt/jPiW1vZSuhUou+hW4m3hocV7L9beDHnKVGD6F3bFnjauIsuoD9HJ4VC0a9AgQma/QIqcBnjfq2i5waQEfX8D4rVkqhfMwU+55uPxaZVEMtNHnyKurD//+Vn95OqUKcPMK1FagGu9uuVomxHq6wowzuqUcLv61dbq8iLYesrOTMh+xWT9oiRDWDAZNa2ICFZPQ2URtCkip5Ijt7M3dM17k0yzO7er+ifIfIO9oFgk7RPP9ZUEfvKVDiBYJvebYou5fv764NF0iu/Mj/0g/GGS/nEhYaoBkYtQtMZDVTWoddbhRNrqKUvv/9XQiyNleTUvrf/YNv2ih8WpoGG3157Otm0231Wvn0mor0Qxsbay1TBTQ7NzJkGYW4wzBrIjgZ2uGq8Bk8ChlstwAxf90zhVszj/uOjHCvVY+iMhgU=
   file: app/build/outputs/apk/app-release-unsigned.apk
   on:
     repo: hawkwei0921/how-to-use-travis-ci
