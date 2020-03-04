@@ -15,7 +15,8 @@ before_install:
 - chmod +x gradlew
 script:
 - "./gradlew assembleRelease"
-before_deploy: 
+before_deploy:
+  - ls -al app/build/outputs/apk/
 deploy:
   provider: releases
   api_key:
