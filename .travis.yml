@@ -22,5 +22,7 @@ deploy:
   api_key:
     secure: bZq3G1k20XeFB2JYO1TEIhN3NLgfh9w65sfVG2OnN4nD/CDr/B01qvuC3Ojk1zzkViJD9Y6hVt1YdDGc2K+vKJWns+mH37FQDHNA4YSOwauH2BGaXa48O6DuHu43dwVZRNCp0GFxTyrwOrZNFu923/wGscMAQvszBS1YU3a8RpH2ffGT2Y0udIH058rWnt/JwI5TfrSaBFQ5ZmFFessFaP0FFpSzMz+9j2evdhJa6KRpEKRY6X29dbIM1zZRfwg+8p7myQ9j0/QNeGxodDAmpgV/yRMv5HdGfa+yOHkMM0gAkanHN7brEMOFmb8EZWJWcmJ5/avdz15oP0YN4eJGA+MAAsnnecS3YIi89vGp3iXP6Ic0FPCIn4i3N7ZAGA/1ulVNBR8I4VO9MKYwtuqNkoPe7FSQ7KpxmIpBvohfzOv8Zwy5g6QKgEmbqI9f/i/hH4MJMYGD3R7lHItHxZM8XxaOi5R6u7jd8OdM0+QFs7iyXVdW0c2AMtLjP1MqvFMGdtBuAMnieg5rq9ru3lrHRfNrOZy9fbUPbAvkBePLRGbb+vJZx1XbQBhUX8GIfoWW3IbD+ThUtF8dqhTpXGMdXh7UZPBUNx6g/ZIlpw4cKqUh3oXqLNABv42njlDPOSDLpqH2Z1uPu2un3giSoKL0cKDm0KSwxW2S8MRmBa96kok=
   file: app/build/outputs/apk/app-release-unsigned.apk
+  skip_cleanup: true
   on:
     repo: hawkwei0921/how-to-use-travis-ci
+    tags: false
